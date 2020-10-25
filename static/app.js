@@ -15,16 +15,16 @@ function selectID() {
 selectID();
 
 // demographic info
-var demInfo = d3.select("#sample-metadata");
+// var demInfo = d3.select("#sample-metadata");
 
-function metaDataList() {
-    d3.json(url).then((data) => {
-        var metaData = data.metadata
-        console.log(metaData)
+// function metaDataList() {
+//     d3.json(url).then((data) => {
+//         var metaData = data.metadata
+//         console.log(metaData)
 
-    });
-}
-metaDataList();
+//     });
+// }
+// metaDataList();
 
 // event listener
 selectDropdown.on("change", optionChanged)
@@ -46,8 +46,8 @@ function defaultPlot() {
         
         var layout = {
             title: "Most Common OTUs",
-            xaxis: { title : "OTU Frequency"},
-            yaxis: { tickvals : samples.otu_ids}            
+            xaxis: { title : "OTU Frequency"}
+            // yaxis: { tickvals : samples.otu_ids}            
         }
         
         Plotly.newPlot("bar", [trace], layout);
@@ -65,9 +65,9 @@ function defaultBubble(){
             x: samples.otu_ids,
             y: samples.sample_values,
             mode: 'markers',
-            marker: {
-                size: (sample.sample_values),
-            }
+            // marker: {
+            //     size: (sample.sample_values),
+            // }
         };
         var layout = {
             xaxis: {title: 'OTU ID'},
