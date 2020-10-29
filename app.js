@@ -1,6 +1,6 @@
 // test subject ID selection
 
-var url = "../samples.json"
+var url = "samples.json"
 var selectDropdown = d3.select("#selDataset");
 
 function selectID() {
